@@ -8,11 +8,72 @@ fun main() {
 //    //2
 //    LittleLemonCafeteria().weekdayTiming()
 
-    //3
-    LittleLemonHourCheck().openOrclose()
+//    //3
+//    LittleLemonHourCheck().openOrclose()
+
+    //4
+    //TriangleStar().rightTriangleStar()
+    //TriangleStar().centreTriangle()
+    //TriangleStar().centreTriangleInverted()
+
+
 
 
 }
+
+
+class TriangleStar {
+    fun rightTriangleStar(){
+        for(i in 1..5){
+            for(j in 1..5){
+                if(j<=i){
+                    //print("$i and $j ")
+                    print("*")
+                }
+
+            }
+            println()
+        }
+    }
+
+    fun centreTriangle() {
+        val n = 5  // Number of rows
+
+    for (i in 0 until n) {
+        // Print leading spaces
+        for (j in 0 until (n-i-1)) { //5-1-1=3
+            print(" ")
+        }
+        // Print stars
+        for (k in 0 until 2 * i + 1) {
+            print("*")
+        }
+        // Print trailing spaces
+        for (j in 0 until n - i - 1) {
+            print(" ")
+        }
+        // Move to the next line
+        println()
+    }
+    }
+
+    fun centreTriangleInverted() {
+        val steps = 5
+        for(i in 1 .. steps){
+            for(j in 1..i-1){
+                print(" ")
+            }
+            for (k in 9 downTo 2*i-1){
+                print("*")
+            }
+            for(l in 1..i-1){
+                print(" ")
+            }
+            println()
+        }
+    }
+}
+
 
 class LittleLemonHourCheck {
     fun openOrclose() {
